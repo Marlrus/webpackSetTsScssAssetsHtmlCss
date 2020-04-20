@@ -9,12 +9,7 @@ module.exports = merge(common,{
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 8080
-    },
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: 'dist'
+        port: 8080,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -35,5 +30,9 @@ module.exports = merge(common,{
     },
     resolve: {
         extensions: ['.ts', '.js']
+    },
+    output: {
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist")
     }
 });

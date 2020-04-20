@@ -26,7 +26,10 @@ module.exports = merge(common, {
                 removeComments: true
             }
         })
-        ]
+        ],
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     devtool: 'none',
     resolve: {

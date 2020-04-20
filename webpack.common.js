@@ -3,16 +3,10 @@ module.exports = {
         main: './src/app.ts',
         vendor: './src/vendor.ts'
     },
-    optimization:{
-        splitChunks: {
-            chunks: 'all'
-        }
-    },
-    devtool: 'inline-source-map',
     module: {
         rules: [
             {
-                test: /\.(ts|tsx)$/,
+                test: /\.tsx$/,
                 use: ['ts-loader'],
                 exclude: /node_modules/
             },
